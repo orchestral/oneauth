@@ -1,19 +1,19 @@
 {
-    "name": "orchestra/oneauth",
-    "description": "Social Auth Extension for Orchestra Platform",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mior Muhammad Zaki",
-            "email": "crynobone@gmail.com"
-        }
-    ],
-    "require": {
-        "laravel/socialite": "dev-master",
-        "orchestra/support-providers": "3.0.*"
-    },
-    "require-dev": {
-        "mockery/mockery": "~0.9"
-    },
-    "minimum-stability": "dev"
+	"name": "orchestra/oneauth",
+	"description": "Social Auth Extension for Orchestra Platform",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Mior Muhammad Zaki",
+			"email": "crynobone@gmail.com"
+		}
+	],
+	"require": {
+		"laravel/socialite": "dev-master",
+		"orchestra/support-providers": "3.0.*"
+	},
+	"require-dev": {
+		"mockery/mockery": "~0.9"
+	},
+	"minimum-stability": "dev"
 }
