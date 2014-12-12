@@ -6,8 +6,18 @@ use Illuminate\Contracts\Auth\Authenticatable;
 
 class UserLoggedIn
 {
+    /**
+     * The session store implementation.
+     *
+     * @var \Illuminate\Session\Store
+     */
     protected $session;
 
+    /**
+     * Construct a new user logged in handler.
+     *
+     * @param \Illuminate\Session\Store  $session
+     */
     public function __construct(Store $session)
     {
         $this->session = $session;
