@@ -68,6 +68,14 @@ use Orchestra\OneAuth\Processor\AuthenticateUser as Processor;
 
 class SocialController extends Controller implements ConnectUser
 {
+    /**
+     * Connect with social provider.
+     *
+     * @param  \Orchestra\OneAuth\Processor\AuthenticateUser  $processor
+     * @param  \Illuminate\Http\Request  $request
+     * @param  string  $provider
+     * @return mixed
+     */
     public function connect(Processor $processor, Request $request, $provider = 'facebook')
     {
         return $processor->execute($this, $provider, $request->has('code'));
