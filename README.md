@@ -1,4 +1,4 @@
-Avatar Component for Orchestra Platform
+Social Authentication Extension for Orchestra Platform
 ==============
 
 Social Authentication Extension for Orchestra Platform
