@@ -15,6 +15,10 @@ class UserConnected
      */
     public function handle(Eloquent $model, array $data, Guard $auth)
     {
+        if ($auth->check()) {
+            return ;
+        }
+
         if (! is_null($id = $this->getAuthenticatedUser($model))) {
             $auth->loginUsingId($id, true);
         }
@@ -28,10 +32,6 @@ class UserConnected
      */
     protected function getAuthenticatedUser(Eloquent $model)
     {
-        if ($this->auth->check()) {
-            return null;
-        }
-
         return $model->getAttribute('user_id');
     }
 }
