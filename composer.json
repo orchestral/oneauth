@@ -10,7 +10,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"Orchestra\\OneAuth": "src/"
+			"Orchestra\\OneAuth\\": "src/"
 		}
 	},
 	"require": {
