@@ -1,5 +1,6 @@
 <?php namespace Orchestra\OneAuth\Handlers;
 
+use Orchestra\OneAuth\User;
 use Illuminate\Session\Store;
 use Illuminate\Contracts\Auth\Authenticatable;
 
