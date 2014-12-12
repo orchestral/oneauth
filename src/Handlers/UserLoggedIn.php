@@ -15,26 +15,26 @@ class UserLoggedIn
     /**
      * Handle user logged in.
      *
-     * @param  \Illuminate\Contracts\Auth\Authenticatable  $authenticatable
+     * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @return bool|null
      */
-    public function handle(Authenticatable $authenticatable)
+    public function handle(Authenticatable $user)
     {
-        if (! $this->session->has('orchestra.oneauth')) {
+        $social = $this->session->get('orchestra.oneauth');
+
+        if (! is_null($social)) {
             return ;
         }
 
-        list($provider, $user) = $this->session->get('orchestra.oneauth', ['provider' => null, 'user' => null]);
-
-        $model = User::where('provider', '=', $provider)
-                    ->where('uid', '=', $user->getId())
+        $model = User::where('provider', '=', $social['provider'])
+                    ->where('uid', '=', $social['user']->getId())
                     ->first();
 
         if (is_null($model)) {
             return ;
         }
 
-        $model->setAttribute('user_id', $authenticatable->getAuthIdentifier());
+        $model->setAttribute('user_id', $user->getAuthIdentifier());
         $model->save();
 
         return true;
