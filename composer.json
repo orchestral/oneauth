@@ -1,6 +1,6 @@
 {
 	"name": "orchestra/oneauth",
-	"description": "Social Auth Extension for Orchestra Platform",
+	"description": "Social Authentication Extension for Orchestra Platform",
 	"license": "MIT",
 	"authors": [
 		{
@@ -8,12 +8,22 @@
 			"email": "crynobone@gmail.com"
 		}
 	],
+	"autoload": {
+		"psr-4": {
+			"Orchestra\\OneAuth": "src/"
+		}
+	},
 	"require": {
-		"laravel/socialite": "dev-master",
-		"orchestra/support-providers": "3.0.*"
+		"php": ">=5.4.0",
+		"laravel/socialite": "dev-master"
 	},
 	"require-dev": {
 		"mockery/mockery": "~0.9"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "3.0-dev"
+		}
 	},
 	"minimum-stability": "dev"
 }
