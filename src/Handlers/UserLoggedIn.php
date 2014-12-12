@@ -23,7 +23,7 @@ class UserLoggedIn
     {
         $social = $this->session->get('orchestra.oneauth');
 
-        if (! is_null($social)) {
+        if (is_null($social)) {
             return ;
         }
 
