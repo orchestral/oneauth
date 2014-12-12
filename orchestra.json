@@ -1,0 +1,11 @@
+{
+    "name" : "OneAuth",
+    "description" : "OneAuth Social Authentication Extension for Orchestra Platform",
+    "author" : "Mior Muhammad Zaki",
+    "url" : "https://github.com/orchestral/oneauth",
+    "version" : "3.0.0@dev",
+    "provides" : [
+        "Laravel\\Socialite\\SocialiteServiceProvider",
+        "Orchestra\\OneAuth\\OneAuthServiceProvider"
+    ]
+}
