@@ -11,6 +11,6 @@ class Token extends Fluent
      */
     public function isValid()
     {
-        return false;
+        return ! empty($this->attributes);
     }
 }
