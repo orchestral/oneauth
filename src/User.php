@@ -1,7 +1,7 @@
 <?php namespace Orchestra\OneAuth;
 
-use Illuminate\Support\Facades\Session;
 use Orchestra\Model\Eloquent;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Contracts\Auth\Authenticatable;
 
 class User extends Eloquent
