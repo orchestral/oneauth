@@ -9,6 +9,7 @@ interface ConnectUser
      *
      * @param  array  $data
      * @param  \Illuminate\Contracts\Auth\Guard  $auth
+     *
      * @return mixed
      */
     public function userHasConnected(array $data, Guard $auth);

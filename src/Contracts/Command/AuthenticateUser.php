@@ -10,6 +10,7 @@ interface AuthenticateUser
      * @param \Orchestra\OneAuth\Contracts\Listener\ConnectUser  $listener
      * @param string  $type
      * @param bool  $hasCode
+     *
      * @return mixed
      */
     public function execute(ConnectUser $listener, $type, $hasCode = false);

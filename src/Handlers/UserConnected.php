@@ -11,6 +11,7 @@ class UserConnected
      * @param  \Orchestra\OneAuth\User  $model
      * @param  array  $data
      * @param  \Illuminate\Contracts\Auth\Guard  $auth
+     *
      * @return void
      */
     public function handle(Eloquent $model, array $data, Guard $auth)
@@ -28,6 +29,7 @@ class UserConnected
      * Get user unique identifier or return null.
      *
      * @param  \Orchestra\OneAuth\User $model
+     *
      * @return mixed|null
      */
     protected function getAuthenticatedUser(Eloquent $model)

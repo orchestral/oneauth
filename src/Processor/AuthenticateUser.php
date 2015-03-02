@@ -51,10 +51,10 @@ class AuthenticateUser implements Command
      */
     public function __construct(Guard $auth, Dispatcher $dispatcher, Store $session, Socialite $socialite)
     {
-        $this->auth = $auth;
+        $this->auth       = $auth;
         $this->dispatcher = $dispatcher;
-        $this->session = $session;
-        $this->socialite = $socialite;
+        $this->session    = $session;
+        $this->socialite  = $socialite;
     }
 
     /**
@@ -63,6 +63,7 @@ class AuthenticateUser implements Command
      * @param \Orchestra\OneAuth\Contracts\Listener\ConnectUser  $listener
      * @param string  $type
      * @param bool  $hasCode
+     *
      * @return mixed
      */
     public function execute(ConnectUser $listener, $type, $hasCode = false)
@@ -84,6 +85,7 @@ class AuthenticateUser implements Command
      * Get authorization first from provider.
      *
      * @param  \Laravel\Socialite\Contracts\Provider  $provider
+     *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     protected function getAuthorizationFirst(Provider $provider)
@@ -96,6 +98,7 @@ class AuthenticateUser implements Command
      *
      * @param  \Laravel\Socialite\Contracts\Provider  $provider
      * @param  string  $type
+     *
      * @return array
      */
     protected function getUserData(Provider $provider, $type)
@@ -116,6 +119,7 @@ class AuthenticateUser implements Command
      *
      * @param  \Laravel\Socialite\Contracts\User  $user
      * @param  string  $type
+     *
      * @return \Orchestra\OneAuth\User
      */
     protected function attemptToConnectUser(User $user, $type)
@@ -135,13 +139,14 @@ class AuthenticateUser implements Command
     /**
      * @param  \Laravel\Socialite\Contracts\User  $user
      * @param  string  $type
+     *
      * @return \Orchestra\OneAuth\User
      */
     protected function getClientOrCreate(User $user, $type)
     {
         return Eloquent::firstOrNew([
             'provider' => $type,
-            'uid' => $user->getId(),
+            'uid'      => $user->getId(),
         ]);
     }
 }

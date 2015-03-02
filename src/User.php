@@ -22,6 +22,7 @@ class User extends Eloquent
      * Get token attribute using accessor.
      *
      * @param  mixed  $value
+     *
      * @return \Orchestra\OneAuth\Token
      */
     public function getTokenAttribute($value)
@@ -37,6 +38,7 @@ class User extends Eloquent
      * Set token attribute using mutator.
      *
      * @param  \Orchestra\OneAuth\Token  $token
+     *
      * @return void
      */
     public function setTokenAttribute(Token $token)

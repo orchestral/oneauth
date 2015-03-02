@@ -27,6 +27,7 @@ class UserLoggedIn
      * Handle user logged in.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+     *
      * @return bool|null
      */
     public function handle(Authenticatable $user)
