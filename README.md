@@ -50,6 +50,7 @@ In `app/Http/routes.php`:
 
 ```php
 <?php
+
 Route::get('social/{provider}/connect', [
     'uses'  => 'Auth\SocialController@connect'
 ])->where('{provider}', '(.+)');
