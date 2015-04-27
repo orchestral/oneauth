@@ -20,7 +20,7 @@ Social Authentication Extension for Orchestra Platform
 
 Laravel  | OneAuth
 :--------|:---------
- 5.0.x   | 3.0.x@dev
+ 5.0.x   | 3.0.x
 
 ## Installation
 
