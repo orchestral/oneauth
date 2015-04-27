@@ -8,12 +8,10 @@ php:
 
 before_script:
   - travis_retry composer self-update
-  - travis_retry composer require satooshi/php-coveralls:~0.6 --prefer-source --no-interaction --dev
+  - travis_retry composer install --prefer-source --no-interaction --dev
 
-script: phpunit -c phpunit.xml --coverage-text
+script: ./vendor/bin/phpspec run
 
-after_script:
-  - php vendor/bin/coveralls -v
 
 matrix:
   allow_failures:
