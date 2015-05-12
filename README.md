@@ -20,6 +20,7 @@ Social Authentication Extension for Orchestra Platform
 Laravel  | OneAuth
 :--------|:---------
  5.0.x   | 3.0.x
+ 5.1.x   | 3.1.x@dev
 
 ## Installation
 
@@ -28,7 +29,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require": {
-		"orchestra/oneauth": "3.0.*"
+		"orchestra/oneauth": "3.1.*"
 	}
 }
 ```
@@ -40,7 +41,7 @@ And then run `composer install` to fetch the package.
 You could also simplify the above code by using the following command:
 
 ```
-composer require "orchestra/oneauth=3.0.*"
+composer require "orchestra/oneauth=3.1.*"
 ```
 
 ## Usage
