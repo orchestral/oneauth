@@ -6,7 +6,7 @@ Social Authentication Extension for Orchestra Platform
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/oneauth.svg?style=flat)](https://packagist.org/packages/orchestra/oneauth)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/oneauth.svg?style=flat)](https://packagist.org/packages/orchestra/oneauth)
 [![MIT License](https://img.shields.io/packagist/l/orchestra/oneauth.svg?style=flat)](https://packagist.org/packages/orchestra/oneauth)
-[![Build Status](https://img.shields.io/travis/orchestral/oneauth/3.1.svg?style=flat)](https://travis-ci.org/orchestral/oneauth)
+[![Build Status](https://img.shields.io/travis/orchestral/oneauth/master.svg?style=flat)](https://travis-ci.org/orchestral/oneauth)
 [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/oneauth/master.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/oneauth/)
 
 ## Table of Content
