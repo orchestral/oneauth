@@ -21,11 +21,7 @@ before_script:
   - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "psr/log=1.0.0" "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
 
 script:
-  - if [[ $coverage = 'yes' ]]; then phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml; fi
-  - if [[ $coverage = 'no' ]]; then phpunit -c phpunit.xml; fi
-
-after_script:
-  - if [[ $setup = 'coveralls' ]]; then php vendor/bin/coveralls -v; fi
+  - ./vendor/bin/phpspec run
 
 matrix:
   include:
@@ -33,8 +29,6 @@ matrix:
       env: setup=lowest
     - php: 5.4
       env: setup=stable
-    - php: 5.4
-      env: setup=coveralls coverage=yes
   allow_failures:
     - env: setup=lowest
     - env: setup=stable
