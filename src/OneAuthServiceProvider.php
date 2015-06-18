@@ -7,6 +7,11 @@ use Orchestra\Support\Providers\EventServiceProvider;
 
 class OneAuthServiceProvider extends EventServiceProvider
 {
+    /**
+     * The event handler mappings for the application.
+     *
+     * @var array
+     */
     protected $listen = [
         'auth.login'  => UserLoggedIn::class,
         'auth.logout' => UserLoggedOut::class,
