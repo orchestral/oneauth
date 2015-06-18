@@ -13,10 +13,9 @@ class OneAuthServiceProvider extends EventServiceProvider
      * @var array
      */
     protected $listen = [
-        'auth.login'  => UserLoggedIn::class,
-        'auth.logout' => UserLoggedOut::class,
-
-        'orchestra.oneauth.user: saved' => UserConnected::class,
+        'auth.login'                    => [UserLoggedIn::class],
+        'auth.logout'                   => [UserLoggedOut::class],
+        'orchestra.oneauth.user: saved' => [UserConnected::class],
     ];
 
     /**
