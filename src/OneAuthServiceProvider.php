@@ -1,9 +1,19 @@
 <?php namespace Orchestra\OneAuth;
 
-use Orchestra\Support\Providers\ServiceProvider;
+use Orchestra\OneAuth\Handlers\UserLoggedIn;
+use Orchestra\OneAuth\Handlers\UserConnected;
+use Orchestra\OneAuth\Handlers\UserLoggedOut;
+use Orchestra\Support\Providers\EventServiceProvider;
 
-class OneAuthServiceProvider extends ServiceProvider
+class OneAuthServiceProvider extends EventServiceProvider
 {
+    protected $listen = [
+        'auth.login'  => UserLoggedIn::class,
+        'auth.logout' => UserLoggedOut::class,
+
+        'orchestra.oneauth.user: saved' => UserConnected::class,
+    ];
+
     /**
      * Register the service provider.
      *
@@ -11,8 +21,6 @@ class OneAuthServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['events']->listen('auth.login', 'Orchestra\OneAuth\Handlers\UserLoggedIn');
-        $this->app['events']->listen('orchestra.oneauth.user: saved', 'Orchestra\OneAuth\Handlers\UserConnected');
-        $this->app['events']->listen('auth.logout', 'Orchestra\OneAuth\Handlers\UserLoggedOut');
+        //
     }
 }
