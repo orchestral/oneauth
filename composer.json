@@ -1,32 +1,32 @@
 {
-	"name": "orchestra/oneauth",
-	"description": "Social Authentication Extension for Orchestra Platform",
-	"keywords": ["orchestra-platform", "orchestral", "social-login"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Mior Muhammad Zaki",
-			"email": "crynobone@gmail.com",
-			"homepage": "https://github.com/crynobone"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"Orchestra\\OneAuth\\": "src/"
-		}
-	},
-	"require": {
-		"php": ">=5.5.0",
-		"laravel/socialite": "~2.0",
-		"orchestra/support-providers": "3.2.*"
-	},
-	"require-dev": {
-		"phpspec/phpspec": "~2.1"
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "3.2-dev"
-		}
-	},
-	"minimum-stability": "dev"
+    "name": "orchestra/oneauth",
+    "description": "Social Authentication Extension for Orchestra Platform",
+    "keywords": ["orchestra-platform", "orchestral", "social-login"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\OneAuth\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "laravel/socialite": "~2.0",
+        "orchestra/support-providers": "~3.3.*"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.3-dev"
+        }
+    },
+    "minimum-stability": "dev"
 }
